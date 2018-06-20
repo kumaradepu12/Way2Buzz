@@ -32,28 +32,28 @@ var client = new elasticsearch.Client({
 module.exports=function (router) {
 
     function verifyToken(req,res,token){
-        console.log(req.bo)
+        // console.log(req.bo)
         if(!req.headers['x-access-token']){
             res.status(401).send("Unauthorized Request");
         }
         else {
             var token = req.headers['x-access-token'].split(" ")[1];
 
-            console.log(token)
+            // console.log(token)
             if (token == "null") {
                 res.status(401).send("Unauthorized Request");
             }
             else {
-                console.log("jere")
+                // console.log("jere")
                 let payload = jwt.verify(token, 'angular')
                 if (payload=="invalid token") {
-                    console.log("PAYLOASD")
+                    // console.log("PAYLOASD")
                     res.status(401).send("Unauthorized Request");
                 }
                 else {
-                    console.log("here")
-                    console.log(jwt.decode(token,'angular'))
-                    console.log(payload);
+                    // console.log("here")
+                    // console.log(jwt.decode(token,'angular'))
+                    // console.log(payload);
                     req.userId = payload.subject;
 
                 }
@@ -80,7 +80,7 @@ module.exports=function (router) {
 
 
     router.post('/me',function (req,res) {
-        console.log(res);
+        // console.log(res);
         res.send(req.decoded);
     });
 
@@ -127,7 +127,7 @@ module.exports=function (router) {
         var u_companies=[];
         users.findOne({encEmail:req.body.mail},{MyCompanies:1,_id:0},function (err,companies) {
             if(err)  {
-                console.log("in error")
+                // console.log("in error")
                 res.json({cmplist:u_companies})
             }
             else if(companies == null){

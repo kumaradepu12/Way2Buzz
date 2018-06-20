@@ -1,0 +1,14 @@
+{
+  "LinkedinLogin":{
+    "Client ID":"78op162j76iz01",
+    "Client Secret":"uUkOU8u5EkCYuY8y",
+    "CallBackUrl":"http://172.16.20.127:8000/auth/linkedin/callback"
+  },
+
+  "elasticsearch":{
+    "url":"http://192.168.5.143",
+    "port":"9200",
+    "username":"",
+    "password":""
+  }
+}

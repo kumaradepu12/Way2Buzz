@@ -1,0 +1,149 @@
+<!doctype html>
+
+<title>way2buzz</title>
+<div class="block"  >
+    <div class="navbar-default sidebar" role="navigation">
+        <div class="logoblock">
+           <a href="/home"> <span class="enrich-logo icon-block"></span></a>
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+        </div>
+        <div class="sidebar-nav navbar-collapse">
+            <div class="user-profile">
+                <div class="profile-image"><img src="{{profilepic}}"/> </div>
+                <div class="profile-details">
+                    <h3>{{username}}</h3>
+                    <p class="profile-title">{{desi}}</p>
+                </div>
+            </div>
+            <div class="sidemenu">
+                <ul class="list-unstyled">
+                    <li> <a href="" ng-click="my_Company_list(email)"><i class="icon-companies"></i> My Companies</a> </li>
+                    <li> <a href="" ng-click="my_Contact_list(email)"><i class="icon-contacts"></i> My Contacts</a> </li>
+                </ul>
+            </div>
+        </div>
+        <!--<p class="copyrights">&COPY; copyright by <b>way2enrich</b></p>-->
+    </div>
+    <!-- Contentblock -->
+
+    <div class="mainblock">
+        <header class="header-nav">
+            <div class="row">
+                <div class="col-md-9 header-search-section">
+                    <form class="" ng-submit="selector(search,data.unit)" >
+                        <select class="dropdown"  ng-model="data.unit">
+                            <option ng-selected="data.unit == item.id" ng-repeat="item in units" ng-value="item.id">{{item.label}}</option>
+                        </select>
+
+
+                        <!--<div class="dropdown dropdown-lg">-->
+                            <!--<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false"></span>JobTitle</button>-->
+                            <!--<div class="dropdown-menu dropdown-menu-left" role="menu">-->
+
+                                <!--<label>JobTitle</label>-->
+
+                                <!--<autocomplete ng-model="jobtitle" attr-class="ac_jobtitle"-->
+                                              <!--data="companies" on-type="doSomething_jt" >-->
+                                <!--</autocomplete>-->
+                                <!--&lt;!&ndash;<button ng-click="selector(advanced,data.unit)" type="button" style="width: 60px;height: 30px" class="btn btn-primary btn-xs">submit</button>&ndash;&gt;-->
+
+                            <!--</div>-->
+                        <!--</div>-->
+
+                        <!--<div class="dropdown dropdown-lg">-->
+                            <!--<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false"></span>Company</button>-->
+                            <!--<div class="dropdown-menu dropdown-menu-left" role="menu">-->
+
+                                <!--<label>Company</label>-->
+
+                                <!--<autocomplete ng-model="company" attr-class="ac_company"-->
+                                              <!--data="companies" on-type="doSomething_comp" >-->
+                                <!--</autocomplete>-->
+                                <!--&lt;!&ndash;<button ng-click="selector(advanced,data.unit)" type="button" style="width: 60px;height: 30px" class="btn btn-primary btn-xs">submit</button>&ndash;&gt;-->
+
+                            <!--</div>-->
+                        <!--</div>-->
+
+
+
+
+
+                        <autocomplete ng-model="search"
+                                      attr-placeholder="Company Search here..."
+                                      click-activation="true"
+                                      data="companies" on-type="doSomething" on-select="doSomethingElse" >
+                        </autocomplete>
+
+                        <button type="button"   ng-click="selector(search,data.unit)" class="search-btn"><i class="icon-search"></i></button>
+
+                    </form>
+                        <div class="dropdown">
+                            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Advanced Search
+                            </button>
+
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton" style="width: 100%">
+                                <form class="form-control" ng-submit="advancedSearch(jobtitle,company,industry,location)">
+                                    <label>JobTitle</label>
+
+                                    <input type="text" ng-model="jobtitle">
+
+                                    <!--<input style="width:20%" list="browsers">-->
+
+                                    <!--<datalist id="browsers">-->
+                                        <!--<option value="Internet Explorer">-->
+                                        <!--<option value="Firefox">-->
+                                        <!--<option value="Chrome">-->
+                                        <!--<option value="Opera">-->
+                                        <!--<option value="Safari">-->
+                                    <!--</datalist>-->
+
+                                    <label>Company</label>
+
+                                    <input type="text" ng-model="company">
+
+                                    <label>Industry</label>
+                                    <input type="text" ng-model="industry">
+
+                                    <label>Location</label>
+                                    <input type="text" ng-model="location">
+
+
+                                    <button style="width: 60px;height: 30px" type="button" value="Submit" class="btn-primary" ng-click="advancedSearch(jobtitle,company,industry,location)">Submit</button>
+                                </form>
+                            </div>
+                        </div>
+
+
+
+
+
+
+                </div>
+
+                <div class="col-md-3">
+                    <ul class="list-inline list-unstyled header-right">
+                        <li><a href=""><i class="icon-notifcation"></i></a> </li>
+                        <li><a href="" ng-click="logout()" ><i class="icon-logout-1"></i></a> </li>
+                    </ul>
+                </div>
+
+            </div>
+        </header>
+        <section class="container-fluid contentblock">
+            <div class="main-wrapper">
+                <div class="col-md-10">
+                    <div class="left-colum">
+
+                    </div>
+                </div>
+
+                <div class="col-md-2 padding-right-0">
+                    <div class="right-colum">
+                        <img src="images/right-colum-bg.png" alt=""/>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</div>

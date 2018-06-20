@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-120804025-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-120804025-1');
+    </script>
+
+    <base href="/">
+    <title>Way2Buzz</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <link rel="shortcut icon" href="images/title.png">
+    <link rel="stylesheet" href="assets/styles/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/styles/enrichresponsive.css">
+    <link rel="stylesheet" href="assets/styles/enrichstyles.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/autocomplete.css">
+    <link rel="stylesheet" href="assets/css/pagination.css">
+
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/angular.js"></script>
+    <script src="assets/js/angular-route.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+
+    <script src="controllers/app.js"></script>
+    <script src="controllers/router.js"></script>
+    <script src="controllers/mainctrl.js"></script>
+    <script src="controllers/authServices.js"></script>
+    <script src="controllers/dirPagination.js"></script>
+    <script src="controllers/autocomplete.js"></script>
+
+</head>
+
+<body ng-app="MyApp" ng-controller="MyController as main" ng-view  ng-show="loadme">
+
+</body>
+
+</html>

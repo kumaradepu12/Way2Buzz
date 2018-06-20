@@ -1,0 +1,31 @@
+@media (min-width: 768px){
+    
+    .sidebar {
+    z-index: 1;
+    position:fixed;
+    width: 200px;    
+    height:100vh;
+/*    margin-top: -50px;*/
+}
+    .mainblock
+    {
+    position: inherit;
+    margin-left: 200px;
+    border-left: 1px solid #e7e7e7;
+}
+    
+}
+@media only screen and (max-width:320px) {
+}
+@media only screen and (min-width:321px) and (max-width:480px) {
+}
+@media only screen and (min-width:481px) and (max-width:768px) {
+}
+
+@media only screen and (min-width:769px) and (max-width:969px) {
+}
+@media only screen and (min-width:969px) and (max-width:1700px){
+    
+}
+@media only screen and (min-width: 1650px) {
+}
